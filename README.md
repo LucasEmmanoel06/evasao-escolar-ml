@@ -7,7 +7,7 @@ Tecnologias: **PySpark**, **Dash**, **Machine Learning (Gradient Boosting Classi
 
 ## ⚙️ Como executar
 
-### 1️⃣ Clone o reposiório:
+### 1️⃣ Clone o repositório:
 ```bash
 git clone http://github.com/LucasEmmanoel06/evasao-escolar-ml.git
 cd evasao-escolar-ml
