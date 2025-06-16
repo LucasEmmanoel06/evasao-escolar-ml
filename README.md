@@ -8,7 +8,7 @@ Tecnologias: **PySpark**, **Dash**, **Machine Learning (Gradient Boosting Classi
 ## ⚙️ Como executar
 
 ### ✅ Pré-requisitos
-- Pyhon 3.9+
+- Python 3.9+
 - JDK 17
 - Instale as dependências:
 
