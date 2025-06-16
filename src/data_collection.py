@@ -8,16 +8,11 @@ spark = SparkSession.builder \
     .appName("ColetaDadosEvasaoEscolar") \
     .getOrCreate()
 
-#O codigo está dando erro "O sistema não pode encontrar o caminho especificado." 
-# Mas quando executado no Colab ele funciona normalmente.
-# Alguem testa no seu computador e me avisa se funciona?
-
 # Criar diretórios
 os.makedirs("data/raw", exist_ok=True)
 
 # URLs das APIs
 MEC_API_URL = "http://dados.gov.br/api/publico/conjuntos-dados"
-#O link da api do mec está sem funcionar, precisa ser substituido.
 IBGE_API_URL = "https://servicodados.ibge.gov.br/api/v1/pesquisas"
 
 def fetch_api_data(url):
@@ -77,6 +72,7 @@ def main():
     coleta_mec()
     coleta_ibge()
     print("Coleta de dados concluída.")
+    spark.stop()
 
 if __name__ == "__main__":
     main()
