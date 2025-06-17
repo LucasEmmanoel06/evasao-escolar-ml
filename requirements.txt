@@ -1,2 +1,5 @@
 pyspark==3.5.0
 requests==2.31.0
+dash
+dash_auth
+pandas
