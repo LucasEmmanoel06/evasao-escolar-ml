@@ -168,5 +168,5 @@ def update_grafico_risco_evasao(municipio):
 # ▶️ Rodar servidor
 # ===========================
 if __name__ == '__main__':
-    # A função correta para iniciar o servidor do Dash é app.run()
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))  # Render define PORT automaticamente
+    app.run(host='0.0.0.0', port=port, debug=False)
