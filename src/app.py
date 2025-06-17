@@ -4,12 +4,17 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import dash_auth # Importa a biblioteca dash_auth
+import os
+
+current_dir = os.path.dirname(__file__)
+file_path = os.path.join(current_dir, 'data', 'dados.csv')  # ou apenas 'dados.csv' se estiver no mesmo diretório
 
 # ===========================
 # 📥 Ler os dados do CSV
 # ===========================
 # Certifique-se de que 'dados.csv' está no mesmo diretório ou forneça o caminho completo.
-df = pd.read_csv('dados.csv')
+df = pd.read_csv(file_path)
+
 
 # ===========================
 # 🚀 Inicializar o app
